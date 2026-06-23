@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-[#070a13] text-gray-200 antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+@keyframes breathing-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+.animate-breathing {
+  animation: breathing-pulse 3s infinite ease-in-out;
+}
+
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 20px rgba(0,242,254,0.8)); }
+  50% { opacity: 0.8; filter: drop-shadow(0 0 8px rgba(0,242,254,0.3)); }
+}
+.animate-subtle-pulse {
+  animation: subtle-pulse 3s infinite ease-in-out;
+}
+
+/* Base Layout Overrides */
+.app-container {
+  @apply flex flex-col h-screen w-screen overflow-hidden relative z-10;
+}
+
+/* Custom Scrollbar for Sidebar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1a2333;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #00f2fe;
+}
+
+/* Edge Particle Animations */
+.edge-particle-path {
+  stroke-dasharray: 5, 10;
+  animation: edge-flow 1s linear infinite;
+}
+
+.edge-feign .edge-particle-path { stroke: #00f2fe; stroke-width: 3; animation-duration: 1s; }
+.edge-kafka-pub .edge-particle-path { stroke: #ff6b35; stroke-width: 3; stroke-dasharray: 8, 12; animation-duration: 0.5s; }
+.edge-kafka-sub .edge-particle-path { stroke: #ff6b35; stroke-width: 3; stroke-dasharray: 4, 8; animation-duration: 2s; }
+.edge-jpa .edge-particle-path { stroke: #b44fff; stroke-width: 2; animation-duration: 4s; }
+.edge-injection .edge-particle-path { stroke: #3d4a5c; stroke-width: 1.5; animation-duration: 3s; opacity: 0.5; }
+
+@keyframes edge-flow {
+  from { stroke-dashoffset: 15; }
+  to { stroke-dashoffset: 0; }
+}
+
+.react-flow__edge.dimmed { opacity: 0.1 !important; }
+.react-flow__edge.circuit-tracer path {
+  stroke-width: 3;
+  filter: drop-shadow(0 0 8px currentColor);
+}
