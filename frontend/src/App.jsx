@@ -886,11 +886,17 @@ function FlowApp() {
         connectedIds.add(e.source);
         connectedIds.add(e.target);
       });
-      filteredNodes = filteredNodes.filter(n => {
+      const connectedNodes = filteredNodes.filter(n => {
         // Always keep macro nodes in FORCE orbit mode so they act as anchors!
         if (layoutMode === 'FORCE' && (n.type === 'SERVICE' || n.type === 'KAFKA_TOPIC')) return true;
         return connectedIds.has(n.id);
       });
+
+      // If filtering unconnected nodes removes literally every single node (e.g. a monolith), 
+      // fallback to showing the unconnected nodes so the screen isn't just an empty void!
+      if (connectedNodes.length > 0) {
+        filteredNodes = connectedNodes;
+      }
     }
 
     const newNodes = filteredNodes.map(n => ({
