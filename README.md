@@ -1,62 +1,202 @@
 <div align="center">
 
-# 🧬 RIPPLER
+<br/>
 
-### *Spring Boot Architecture Visualizer*
+```
+██████╗ ██╗██████╗ ██████╗ ██╗     ███████╗██████╗
+██╔══██╗██║██╔══██╗██╔══██╗██║     ██╔════╝██╔══██╗
+██████╔╝██║██████╔╝██████╔╝██║     █████╗  ██████╔╝
+██╔══██╗██║██╔═══╝ ██╔═══╝ ██║     ██╔══╝  ██╔══██╗
+██║  ██║██║██║     ██║     ███████╗███████╗██║  ██║
+╚═╝  ╚═╝╚═╝╚═╝     ╚═╝     ╚══════╝╚══════╝╚═╝  ╚═╝
+```
 
-[![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/21/)
+### *Your Spring Boot Architecture. Finally Visible.*
+
+<br/>
+
+[![Java](https://img.shields.io/badge/Java-21-FF6B35?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/21/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2.5-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![React](https://img.shields.io/badge/React-19-00f2fe?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
-[![License](https://img.shields.io/badge/License-MIT-00f2fe?style=for-the-badge)](LICENSE)
+[![JavaParser](https://img.shields.io/badge/JavaParser-3.26.1-00ff87?style=for-the-badge)](https://javaparser.org/)
+[![License](https://img.shields.io/badge/License-MIT-e100ff?style=for-the-badge)](LICENSE)
 
 <br/>
 
-> **Rippler** is an intelligent architecture visualization tool that statically analyzes your Spring Boot codebases and renders stunning, interactive dependency graphs — exposing services, classes, Kafka topics, databases, and inter-service connections in one glance.
+> **You built 10 microservices. They talk to each other through Feign clients, Kafka topics, and shared databases.**
+> **But can you draw the full picture from memory?**
+>
+> **Rippler can. In seconds.**
 
 <br/>
 
 ```
-Upload  →  Parse  →  Visualize  →  Explore
+┌─────────┐      ┌─────────┐      ┌──────────────────────────┐
+│  Upload │ ───▶ │  Parse  │ ───▶ │  Interactive Architecture │
+│ your    │      │  every  │      │  Graph — alive, glowing,  │
+│ project │      │  .java  │      │  and ready to explore     │
+└─────────┘      └─────────┘      └──────────────────────────┘
 ```
+
+<br/>
+
+![Rippler Demo](https://github.com/ayush-sharma-22/Rippler/blob/main/frontend/src/assets/demo.png)
 
 </div>
 
 ---
 
+<br/>
+
+## 🌌 What is Rippler?
+
+Rippler is an **intelligent static analysis tool** that tears open your Spring Boot codebase and renders everything inside — every service, every class, every Kafka stream, every database — as a stunning, interactive, neon-lit architecture graph.
+
+No runtime agents. No bytecode manipulation. No config changes to your project.
+
+Just point Rippler at your code and watch your architecture come alive.
+
+<br/>
+
+**The problem it solves:**
+
+> You join a new team. There are 12 microservices. The architecture diagram on Confluence is 2 years out of date. No one knows which service calls which, or what happens when `payment-service` goes down.
+>
+> **Rippler solves this in 30 seconds.**
+
+<br/>
+
+---
+
 ## ✨ Features
 
-| Feature | Description |
+<br/>
+
+### 🔬 Static Analysis Engine
+Powered by **JavaParser AST** — Rippler reads your source code at the syntax tree level, detecting every annotation, injection, Feign client, Kafka listener, and JPA entity without ever running your application.
+
+### 🗺️ Dual View Architecture Graph
+
+| View | Description |
 |---|---|
-| 🔍 **Static Code Analysis** | Powered by JavaParser — no runtime agents or bytecode needed |
-| 🕸️ **Service Topology** | Visualize how microservices interconnect via Feign, REST, Kafka, and more |
-| 🧩 **Class Code Map** | Drill down into a service's internal class structure and package hierarchy |
-| ⚡ **Dual Layout Physics** | Switch between **Semantic Flow** (Dagre DAG) and **Force Orbit** (ELK) layouts |
-| 🎛️ **Dependency Filters** | Toggle Feign, Kafka, REST, JPA, and Injection edge types independently |
-| 📦 **Multi-Source Ingestion** | Analyze local folders, ZIP archives, or public GitHub repositories |
-| 📷 **HD Graph Export** | Download the full architecture map as a high-resolution PNG |
-| 🎨 **Cyber-Aesthetic UI** | Dark mode, neon glows, animated edges, and smooth micro-animations |
+| **Service Topology** | High-level map of how your microservices interconnect — perfect for architecture reviews |
+| **Class Code Map** | Drill into any service's internal structure — controllers, services, repositories, and their wiring |
+
+### ⚡ Dual Layout Physics
+
+| Layout | Best For |
+|---|---|
+| **Semantic Flow** (Dagre DAG) | Hierarchical codebases — see the layer structure clearly |
+| **Force Orbit** (ELK.js) | Complex microservice meshes — let physics find the natural clusters |
+
+### 💥 Blast Radius Simulation
+Select any node and trigger a **failure simulation**. Watch as Rippler traces every downstream dependency in real time — pulsing Neon Crimson at the failure origin and cascading Warning Amber through every affected service, hop by hop. Know your blast radius before production does.
+
+### 🎛️ Dependency Filters
+Toggle edge types independently — show only Kafka flows, hide internal injections, focus on cross-service Feign calls. Cut through the noise.
+
+### 📦 Multi-Source Ingestion
+Analyze projects from anywhere — no setup required on the target codebase.
+
+### 📷 HD Architecture Export
+Download the full graph as a high-resolution PNG. Drop it straight into your architecture docs, Confluence page, or README.
+
+<br/>
+
+---
+
+## 🧬 What Rippler Detects
+
+<br/>
+
+### Nodes
+
+```
+🔵  SERVICE      ──  Each microservice or application module
+🟢  CLASS        ──  Java classes, interfaces, and Spring components  
+🟣  DATABASE     ──  Detected from datasource config & @Entity mappings
+🟠  KAFKA_TOPIC  ──  Message broker topics (producers & consumers)
+⬜  PACKAGE      ──  Package hierarchy for structural context
+```
+
+### Edges
+
+```
+──────  FEIGN           OpenFeign client calls between services
+──────  REST            RestTemplate / WebClient HTTP calls  
+──────  KAFKA_PUBLISH   KafkaTemplate.send() — fire into the topic
+──────  KAFKA_CONSUME   @KafkaListener — pull from the topic
+──────  JPA_RELATION    Entity → Database table mappings
+──────  INJECTION       Spring @Autowired / constructor injection
+```
+
+<br/>
+
+---
+
+## 🎨 The Visual Experience
+
+Rippler runs on a **Cyberpunk Sci-Fi Neon Dark Mode** visual system — because your architecture deserves better than boxes and arrows.
+
+```
+Background    ──  Deep obsidian gradient (#0b0f19 → #070a13)
+               +  Animated dotted radial grid overlay
+
+Service Nodes ──  Cyber Cyan (#00f2fe → #4facfe)
+               +  Breathing pulse animation
+               +  Neon glow drop-shadow
+
+Database Nodes ── Violet Nebula (#7f00ff → #e100ff)  
+                + Cylinder shape
+                + Purple glow
+
+Kafka Topics  ──  Solar Amber (#ff0844 → #ffb199)
+               +  Orange particle streams
+
+Feign Edges   ──  Bright cyan dashed paths
+               +  Animated dots flowing source → target
+
+Kafka Edges   ──  Orange glowing lines
+               +  Fast burst particles (publish)
+               +  Slow steady stream (consume)
+
+Blast Radius  ──  Neon Crimson (#ff0055) at origin
+               +  Warning Amber (#ffb347) cascade
+               +  Hop-by-hop ripple animation
+```
+
+<br/>
 
 ---
 
 ## 🛠️ Tech Stack
 
+<br/>
+
 ### Backend
-- **Java 21** + **Spring Boot 3.2.5**
-- **JavaParser 3.26.1** — AST-based static analysis engine
-- **Lombok** — Boilerplate reduction
-- **Maven** — Build & dependency management
+```
+Java 21                ──  Core language
+Spring Boot 3.2.5      ──  Application framework  
+JavaParser 3.26.1      ──  AST-based static analysis engine
+Lombok                 ──  Boilerplate reduction
+Maven                  ──  Build & dependency management
+```
 
 ### Frontend
-- **React 19** + **Vite 6**
-- **React Flow (@xyflow/react)** — Interactive graph canvas
-- **ELK.js** — Force-directed layout engine
-- **Dagre** — Hierarchical DAG layout
-- **Framer Motion** — Smooth animations
-- **Lucide React** — Icon library
-- **Tailwind CSS** — Utility-first styling
-- **html-to-image** — HD screenshot exports
-- **tsparticles** — Ambient particle effects
+```
+React 19 + Vite 6      ──  UI framework & build tool
+@xyflow/react          ──  Interactive graph canvas engine
+ELK.js                 ──  Force-directed layout physics
+Dagre                  ──  Hierarchical DAG layout
+Framer Motion          ──  Smooth animations & transitions
+Tailwind CSS           ──  Utility-first styling
+Lucide React           ──  Icon library
+html-to-image          ──  HD PNG export
+tsparticles            ──  Ambient particle effects
+```
+
+<br/>
 
 ---
 
@@ -64,16 +204,16 @@ Upload  →  Parse  →  Visualize  →  Explore
 
 ### Prerequisites
 
-| Requirement | Version |
-|---|---|
-| JDK | 21+ |
-| Maven | 3.8+ |
-| Node.js | 18+ |
-| npm | 9+ |
+```
+JDK      21+
+Maven    3.8+
+Node.js  18+
+npm      9+
+```
 
----
+<br/>
 
-### 1️⃣ Clone the Repository
+### 1️⃣ Clone
 
 ```bash
 git clone https://github.com/ayush-sharma-22/Rippler.git
@@ -87,7 +227,9 @@ cd backend
 mvn spring-boot:run
 ```
 
-> The backend starts on **`http://localhost:8080`**
+```
+✓ Backend running on http://localhost:8080
+```
 
 ### 3️⃣ Start the Frontend
 
@@ -97,47 +239,166 @@ npm install
 npm run dev
 ```
 
-> The frontend starts on **`http://localhost:5173`**
+```
+✓ Frontend running on http://localhost:5173
+```
 
-### 4️⃣ Open in Browser
+### 4️⃣ Open Rippler
 
 ```
 http://localhost:5173
 ```
+
+Upload your project. Watch your architecture appear. 🧬
+
+<br/>
 
 ---
 
 ## 🗺️ How It Works
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                      RIPPLER ENGINE                     │
-│                                                         │
-│  Input Source         Backend Parser        Frontend    │
-│  ─────────────        ──────────────        ────────    │
-│                                                         │
-│  📁 Local Folder  →   JavaParser AST   →   React Flow  │
-│  📦 ZIP Archive   →   Service Mapper   →   Node Graph  │
-│  🐙 GitHub URL    →   Edge Detector    →   Interactive  │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
+                         ┌──────────────────────────────────────┐
+                         │           RIPPLER ENGINE             │
+                         │                                      │
+  ┌──────────────┐       │  ┌─────────────┐   ┌─────────────┐  │
+  │ 📁 Local     │──────▶│  │  JavaParser │   │  Service    │  │
+  │    Folder    │       │  │  AST Engine │──▶│  Detector   │  │
+  └──────────────┘       │  │             │   │             │  │
+                         │  │  Reads all  │   │  MONOLITH   │  │
+  ┌──────────────┐       │  │  .java files│   │     vs      │  │
+  │ 📦 ZIP       │──────▶│  │  without   │   │  MICROSERVICE│  │
+  │    Archive   │       │  │  running   │   └──────┬──────┘  │
+  └──────────────┘       │  │  your app  │          │         │
+                         │  └─────────────┘          ▼         │
+  ┌──────────────┐       │           ┌───────────────────────┐  │
+  │ 🐙 GitHub    │──────▶│           │     Graph Builder     │  │
+  │    URL       │       │           │                       │  │
+  └──────────────┘       │           │  Nodes: Services,     │  │
+                         │           │  Classes, DBs, Kafka  │  │
+                         │           │                       │  │
+                         │           │  Edges: Feign, Kafka, │  │
+                         │           │  JPA, Injection, REST │  │
+                         │           └───────────┬───────────┘  │
+                         │                       │              │
+                         └───────────────────────┼──────────────┘
+                                                 │
+                                                 ▼
+                         ┌──────────────────────────────────────┐
+                         │         REACT FLOW CANVAS            │
+                         │                                      │
+                         │   Interactive  ·  Animated  ·  Live  │
+                         └──────────────────────────────────────┘
 ```
 
-### What Gets Detected
+<br/>
 
-**Nodes**
-- 🔵 `SERVICE` — Each microservice or module
-- 🟢 `CLASS` — Java classes, interfaces, and components
-- 🟣 `DATABASE` — Detected from datasource configuration
-- 🟠 `KAFKA_TOPIC` — Message broker topics
+---
 
-**Edges**
-- `FEIGN` — OpenFeign client calls between services
-- `REST` — RestTemplate / WebClient HTTP calls
-- `KAFKA_PUBLISH` — KafkaTemplate `.send()` calls
-- `KAFKA_CONSUME` — `@KafkaListener` subscriptions
-- `JPA_RELATION` — Entity inheritance and relationships
-- `INJECTION` — Spring `@Autowired` / constructor injection
+## 🎮 Usage Guide
+
+<br/>
+
+### Ingesting Your Project
+
+**📁 Local Folder**
+```
+1. Click "Local / ZIP" tab
+2. Enter the absolute path to your Spring Boot project root
+3. Click "Ingest & Map"
+```
+
+**📦 ZIP Archive**
+```
+1. Click "Local / ZIP" tab
+2. Drag & drop your project ZIP — or click "Select ZIP"
+   ⚠️  Exclude target/ and node_modules/ to keep it small
+3. Click "Ingest & Map"
+```
+
+**🐙 GitHub**
+```
+1. Click the "GitHub" tab
+2. Paste a public repository URL
+   e.g. https://github.com/user/my-spring-app
+3. Click "Ingest & Map"
+```
+
+<br/>
+
+### Exploring the Graph
+
+| Action | How |
+|---|---|
+| **Switch View** | Toggle *Service Topology* ↔ *Class Code Map* in the top bar |
+| **Change Layout** | Switch *Semantic Flow* ↔ *Force Orbit* in the toolbar |
+| **Filter Edges** | Use *Dependency Filters* checkboxes in the sidebar |
+| **Focus a Node** | Hover any node — unconnected nodes dim to reveal the chain |
+| **Inspect a Node** | Click any node — detail panel slides in from the right |
+| **Blast Radius** | Click *Simulate Failure* → select a node → watch it ripple |
+| **Export PNG** | Click 📷 in the top-right toolbar |
+| **Zoom Controls** | `+` `-` and fit-to-screen buttons in the toolbar |
+
+<br/>
+
+---
+
+## 🌐 API Reference
+
+<br/>
+
+All endpoints return the same `AnalysisResult` graph structure.
+
+| Method | Endpoint | Body | Description |
+|---|---|---|---|
+| `POST` | `/api/analyze/path` | `{ "path": "/abs/path/to/project" }` | Analyze from local folder |
+| `POST` | `/api/analyze/zip` | `multipart/form-data: file=*.zip` | Analyze from ZIP upload |
+| `POST` | `/api/analyze/github` | `{ "repoUrl": "https://github.com/..." }` | Clone & analyze GitHub repo |
+
+<br/>
+
+### Response Schema
+
+```json
+{
+  "projectId": "uuid",
+  "projectName": "my-app",
+  "projectType": "MICROSERVICE | MONOLITH",
+  "graph": {
+    "nodes": [
+      {
+        "id": "booking-service",
+        "label": "booking-service",
+        "type": "SERVICE | CLASS | DATABASE | KAFKA_TOPIC | PACKAGE",
+        "metadata": {
+          "scope": "service | class",
+          "annotations": ["SpringBootApplication", "EnableFeignClients"],
+          "packageName": "com.ayush.bookingservice",
+          "serviceName": "booking-service",
+          "isInterface": false
+        }
+      }
+    ],
+    "edges": [
+      {
+        "source": "booking-service",
+        "target": "payment-service",
+        "type": "FEIGN | KAFKA_PUBLISH | KAFKA_CONSUME | JPA_RELATION | SPRING_INJECTION",
+        "label": "FeignClient: PaymentFeignClient",
+        "metadata": { "scope": "service" }
+      }
+    ]
+  },
+  "stats": {
+    "serviceCount": 10,
+    "classCount": 154,
+    "dependencyCount": 73,
+    "packageCount": 82
+  }
+}
+```
+
+<br/>
 
 ---
 
@@ -208,88 +469,66 @@ Rippler/
         ├── App.css
         ├── index.css
         └── main.jsx
----
 
-## 🎮 Usage Guide
-
-### Ingesting a Project
-
-**Option A — Local Path**
-1. Click **Local / ZIP** tab
-2. Enter the absolute path to your Spring Boot project root
-3. Click **Ingest & Map**
-
-**Option B — ZIP Upload**
-1. Click **Local / ZIP** tab
-2. Drag & drop a ZIP file of your project, or click **Select ZIP**
-3. Click **Ingest & Map**
-
-**Option C — GitHub**
-1. Click the **GitHub** tab
-2. Paste a public repository URL (e.g. `https://github.com/user/repo`)
-3. Click **Ingest & Map**
-
-### Exploring the Graph
-
-| Action | How |
-|---|---|
-| **Switch View** | Toggle between *Service Topology* and *Class Code Map* |
-| **Change Layout** | Switch between *Semantic Flow* and *Force Orbit* physics |
-| **Filter Edges** | Use the *Dependency Filters* checkboxes in the sidebar |
-| **Focus a Node** | Click any node to highlight its direct connections |
-| **Show Isolates** | Enable *Show Unconnected Nodes* to reveal standalone classes |
-| **Export PNG** | Click the 📷 button in the top-right toolbar |
-| **Zoom Controls** | Use the `+`, `−`, and fit-to-screen buttons in the toolbar |
+<br/>
 
 ---
 
-## 🌐 API Reference
+## ⚙️ Configuration
 
-| Method | Endpoint | Description |
-|---|---|---|
-| `POST` | `/api/analyze/path` | Analyze from an absolute local folder path |
-| `POST` | `/api/analyze/zip` | Analyze from an uploaded ZIP file |
-| `POST` | `/api/analyze/github` | Clone & analyze a public GitHub repository |
-
----
-
-## 🔧 Configuration
-
-Edit `backend/src/main/resources/application.properties`:
+`backend/src/main/resources/application.properties`
 
 ```properties
-# Server port
+# Server
 server.port=8080
 
-# Maximum ZIP upload size (default: 1GB)
-spring.servlet.multipart.max-file-size=1024MB
-spring.servlet.multipart.max-request-size=1024MB
+# File upload limits
+spring.servlet.multipart.max-file-size=100MB
+spring.servlet.multipart.max-request-size=100MB
+
+# Tomcat
+server.tomcat.max-http-form-post-size=100MB
 ```
+
+> 💡 **Tip:** Before uploading a ZIP, delete the `target/` folder first.
+> A clean Spring Boot project ZIP should be **under 10MB**.
+
+<br/>
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request.
+Contributions, issues, and feature requests are welcome.
 
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feat/amazing-feature`
-3. Commit your changes: `git commit -m 'feat: add amazing feature'`
-4. Push to the branch: `git push origin feat/amazing-feature`
-5. Open a Pull Request
+```bash
+# Fork → Clone → Branch → Code → Push → PR
+
+git checkout -b feat/your-feature
+git commit -m "feat: add your feature"
+git push origin feat/your-feature
+```
+
+<br/>
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+MIT License — see [LICENSE](LICENSE) for details.
+
+<br/>
 
 ---
 
 <div align="center">
 
-Built with 🧬 by **Ayush Sharma**
+```
+Built with obsession by Ayush Sharma
+```
 
-*If Rippler helped you understand your codebase, give it a ⭐!*
+*If Rippler helped you understand your codebase — or impressed someone in a code review — give it a ⭐*
+
+[![GitHub stars](https://img.shields.io/github/stars/ayush-sharma-22/Rippler?style=for-the-badge&color=00f2fe)](https://github.com/ayush-sharma-22/Rippler/stargazers)
 
 </div>
