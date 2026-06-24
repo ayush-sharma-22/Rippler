@@ -11,7 +11,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/analyze")
-@CrossOrigin(origins = "*")
+@CrossOrigin(originPatterns = "*")
 @RequiredArgsConstructor
 public class AnalysisController {
 
