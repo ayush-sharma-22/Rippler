@@ -91,9 +91,9 @@ function FlowApp() {
     try {
       let res;
       if (ingestTab === 'GITHUB' && githubUrl) {
-        res = await axios.post('/api/analyze/github', { url: githubUrl });
+        res = await axios.post('https://kennyack-rippler.hf.space/api/analyze/github', { url: githubUrl });
       } else if (ingestTab === 'LOCAL' && folderPath) {
-        res = await axios.post('/api/analyze/folder', { path: folderPath });
+        res = await axios.post('https://kennyack-rippler.hf.space/api/analyze/folder', { path: folderPath });
       } else {
         setLoading(false);
         return;
@@ -115,7 +115,7 @@ function FlowApp() {
     const formData = new FormData();
     formData.append('file', file);
     try {
-      const res = await axios.post('/api/analyze/zip', formData, {
+      const res = await axios.post('https://kennyack-rippler.hf.space/api/analyze/zip', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
         onUploadProgress: (progressEvent) => {
           const pct = Math.round((progressEvent.loaded * 100) / (progressEvent.total || 1));
