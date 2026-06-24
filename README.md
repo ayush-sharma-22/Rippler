@@ -29,15 +29,12 @@
 > **Rippler can. In seconds.**
 
 <br/>
-<pre>
-
-```
+<pre
 ┌─────────┐      ┌─────────┐      ┌──────────────────────────┐
 │  Upload │ ───▶ │  Parse  │ ───▶ │  Interactive Architecture │
 │ your    │      │  every  │      │  Graph — alive, glowing,  │
 │ project │      │  .java  │      │  and ready to explore     │
 └─────────┘      └─────────┘      └──────────────────────────┘
-```
 </pre>
 
 <br/>
