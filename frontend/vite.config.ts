@@ -6,7 +6,13 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:8080'
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        timeout: 600000,       // 10 minutes
+        proxyTimeout: 600000,  // 10 minutes
+      }
     }
   }
 })
+
